@@ -24,17 +24,20 @@ self.grid = DataGrid()
 # current grid support this form : 
 # {
 #  'text': 'xxx',   # title display in header cell
-#  'type': 'Lable'  # type can be 'Lable' or 'Button'
+#  'type': 'Lable'  # type can be 'Lable' or 'Button' or 'BorderLabel' or 'BorderButton'
+#  'borders': (.5, 'solid', (1,1,1,0.3))  // size, type, color
+#  'callback': function  # for button
+#  'params': **kwargs  # for callback function
 # }
 # Datagrid will count header elements as collums
-self.grid.setupGrid([{'text':"Header 1", 'type':'Lable'}, 
-	{'text':"Header 2", 'type':'Lable'}, 
-	{'text':"Header 3", 'type':'Lable'}, 
-	{'text':"Header 4", 'type':'Lable'}, 
-	{'text':"Header 5", 'type':'Lable'}, 
-	{'text':"Header 6", 'type':'Lable'}, 
-	{'text':"Header 7", 'type':'Lable'}, 
-	{'text':"Header 8", 'type':'Lable'}], Window.width, 32)
+self.grid.setupGrid([{'text':"Header 1", 'type':'BorderLabel', 'width': 100}, 
+	{'text':"Header 2", 'type':'BorderLabel', 'width': 100},
+	{'text':"Header 3", 'type':'BorderLabel', 'width': 100}, 
+	{'text':"Header 4", 'type':'BorderLabel', 'width': 100}, 
+	{'text':"Header 5", 'type':'Label', 'width': 100}, 
+	{'text':"Header 6", 'type':'Label', 'width': 100}, 
+	{'text':"Header 7", 'type':'Label', 'width': 100}, 
+	{'text':"Header 8", 'type':'Label', 'width': 100}], Window.width, 46)
 # add grid to screen or app
 self.add_widget(self.grid)
 

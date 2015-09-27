@@ -9,6 +9,8 @@ my work is a plugin that allow to created a grid ( currently kivy not support da
 - Fully create a table as datagrid
 - Border support ( by borderbehavior - from github )
 - Edit, Delete, Insert Row
+- Support Label, BorderLabel, Button, BorderButton
+- Support callback, params for button
 - Change rows color
 
 ### Using
